@@ -1,0 +1,54 @@
+@use "../util/" as u;
+
+@include u.breakpoint(laptop) {
+  .container {
+    display: grid;
+    place-items: center;
+  }
+  .slide {
+    flex-direction: row;
+    justify-content: center;
+
+    &__pics {
+      flex: 1 1 40%;
+      transform: scale(0.9) translateX(-3.25rem);
+
+      &__bg {
+        transform: scale(1.3);
+      }
+    }
+
+    &__desc {
+      flex: 0 1 40%;
+      align-items: flex-start;
+      padding-inline: 0;
+      transform: translateX(3.25rem);
+      z-index: 2;
+      background: url("http://127.0.0.1:5500/images/pattern-quotes.svg")
+        no-repeat 20% top;
+      padding-top: 4rem;
+    }
+
+    &__testi {
+      text-align: left;
+      font-size: 1.815rem;
+      font-weight: 300;
+    }
+
+    &__namjob {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+
+    &__button {
+      left: 0;
+      transform: translate(50%, 50%);
+      > button {
+        padding: 1.8rem;
+      }
+    }
+  }
+}

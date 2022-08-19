@@ -1,0 +1,102 @@
+@use "../util/" as u;
+.container {
+  width: 100vw;
+  background: url("http://127.0.0.1:5500/images/pattern-curve.svg") no-repeat
+    bottom left;
+  background-size: contain;
+  min-height: 100vh;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  &__pics {
+    position: relative;
+    max-width: max-content;
+    transform: scale(0.7);
+    &--bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: scale(1.25);
+      z-index: -1;
+    }
+  }
+
+  &__pic {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+
+  &__button {
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // gap: 0.5rem;
+    width: max-content;
+    background-color: white;
+    border-radius: 5rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+      rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+
+    > button {
+      outline: none;
+      border: none;
+      padding: 1.5rem;
+      cursor: pointer;
+    }
+
+    > button:first-child {
+      background: url("https://raw.githubusercontent.com/driback/coding-bootcamp-testimonials-slider/main/images/icon-prev.svg")
+        no-repeat center center;
+    }
+
+    > button:last-child {
+      background: url("https://raw.githubusercontent.com/driback/coding-bootcamp-testimonials-slider/main/images/icon-next.svg")
+        no-repeat center center;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.125rem;
+    color: u.$dark-blue;
+    padding-top: 2rem;
+    padding-inline: 2.5rem;
+    background: url("http://127.0.0.1:5500/images/pattern-quotes.svg") no-repeat
+      center top;
+    background-size: 20%;
+  }
+
+  &__testi {
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__namjob {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 1rem;
+
+    > span:first-child {
+      font-weight: 700;
+    }
+
+    > span:last-child {
+      color: u.$grayish-blue;
+    }
+  }
+}

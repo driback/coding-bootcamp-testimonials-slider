@@ -1,0 +1,18 @@
+@use "../util/" as u;
+
+@include u.breakpoint(desktop) {
+  .slide {
+    &__testi {
+      font-size: 32px;
+    }
+
+    &__pics {
+      flex: 1 1 43%;
+      transform: scale(0.9) translateX(-3.5rem);
+    }
+    &__desc {
+      flex: 0 0 43%;
+      transform: translateX(3.5rem);
+    }
+  }
+}
